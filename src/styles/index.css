@@ -1,0 +1,224 @@
+.main {
+  width: 100vw;
+  height: 141.42vw;
+  background-color: #ececec;
+  font-family: "IBM Plex Mono", monospace;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "top top" "side info";
+  -ms-grid-rows: 29vw 112.42vw;
+      grid-template-rows: 29vw 112.42vw;
+  -ms-grid-columns: 29vw 71vw;
+      grid-template-columns: 29vw 71vw;
+  color: #161616;
+}
+
+.icon {
+  max-height: 1vw;
+}
+
+.link {
+  margin-top: 0.5vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.4vw;
+  line-height: 1.6vw;
+  color: #161616;
+  font-weight: 200;
+  text-decoration: none;
+  position: relative;
+}
+
+.link::after {
+  height: 0.7px;
+  width: 100%;
+  content: "";
+  background: #161616;
+  position: absolute;
+  bottom: -0.4vw;
+  left: 0;
+}
+
+.link:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+  background: linear-gradient(90deg, #ff0000, #8800ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link:hover::after {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+  background: linear-gradient(90deg, #ff0000, #8800ff);
+}
+
+.top-section {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: top;
+  background-color: #e0e0e0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-section .img {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  padding: 2vw;
+}
+
+.top-section .header {
+  width: 71vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top-section .header .name {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 2.8vw;
+}
+
+.top-section .header .title {
+  margin-top: 0.5vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-size: 1.42vw;
+}
+
+.side-section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: side;
+  border-right: solid 1px #e4e4e4;
+}
+
+.side-section .sub-section {
+  border-bottom: solid 1px #e4e4e4;
+  padding: 2vw;
+}
+
+.side-section .sub-section .sub-section-title {
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  font-family: "IBM Plex Mono", monospace;
+  color: #737373;
+}
+
+.side-section .sub-section .sub-section-title-2 {
+  font-size: 1.3vw;
+  line-height: 1.3vw;
+  display: block;
+  margin-top: 1vw;
+  font-family: "IBM Plex Mono", monospace;
+  color: #737373;
+  font-weight: 200;
+}
+
+.side-section .sub-section .info-list {
+  color: #737373;
+}
+
+.side-section .sub-section .info-list .info-list-item {
+  position: relative;
+  margin-top: 1.2vw;
+  height: 1.8vw;
+  font-family: "IBM Plex Mono", monospace;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.side-section .sub-section .info-list .info-list-item .info-link {
+  margin-top: 0.5vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.4vw;
+  line-height: 1.6vw;
+  color: #161616;
+  font-weight: 200;
+  text-decoration: none;
+  position: relative;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.6vw;
+  line-height: 1.8vw;
+  text-decoration: none;
+  color: #737373;
+  margin-left: 1vw;
+}
+
+.side-section .sub-section .info-list .info-list-item .info-link::after {
+  height: 0.7px;
+  width: 100%;
+  content: "";
+  background: #161616;
+  position: absolute;
+  bottom: -0.4vw;
+  left: 0;
+}
+
+.side-section .sub-section .info-list .info-list-item .info-link:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+  background: linear-gradient(90deg, #ff0000, #8800ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.side-section .sub-section .info-list .info-list-item .info-link:hover::after {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+  background: linear-gradient(90deg, #ff0000, #8800ff);
+}
+
+.side-section .sub-section .info-list .info-list-item .info-link::after {
+  display: none;
+}
+
+.side-section .sub-section .info-list .info-list-item .small-text {
+  font-size: 1vw;
+  line-height: 1vw;
+}
+
+.side-section .sub-section .info-list .info-list-item .no-hover:hover {
+  background: #737373;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.side-section .sub-section .info-list .small-margin {
+  margin-top: 0.86vw;
+}
+
+.side-section .no-border {
+  border-bottom: unset;
+}
+
+.info-section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: info;
+}
+/*# sourceMappingURL=index.css.map */

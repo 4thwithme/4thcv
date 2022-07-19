@@ -1,0 +1,21 @@
+{
+  "name": "4thcv",
+  "version": "1.0.0",
+  "description": "ANDRII POPENKO. CV. Full stack softvare engineer. https://github.com/4thwithme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ANDRII",
+    "POPENKO",
+    "full",
+    "stack",
+    "developer",
+    "dev",
+    "softvare",
+    "cv"
+  ],
+  "author": "4thwithme",
+  "license": "MIT"
+}
