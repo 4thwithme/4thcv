@@ -1,3 +1,13 @@
+.main-header {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+  background: linear-gradient(90deg, #ff0000, #8800ff);
+  font-family: "IBM Plex Mono", monospace;
+  color: #fff;
+  padding: 0.4vw 0;
+  text-align: center;
+  font-size: 1vw;
+}
+
 .main {
   width: 100vw;
   height: 141.42vw;
