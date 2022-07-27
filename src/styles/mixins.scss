@@ -29,3 +29,22 @@
     }
   }
 }
+
+@mixin line {
+  background-color: $black;
+  border-radius: 0.1vw;
+}
+
+@mixin dot {
+  width: 1.5vw;
+  height: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-main;
+
+  & > .git-commit {
+    height: auto;
+    width: 1.8vw;
+  }
+}

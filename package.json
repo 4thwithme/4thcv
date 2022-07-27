@@ -4,7 +4,8 @@
   "description": "ANDRII POPENKO. CV. Full stack softvare engineer. https://github.com/4thwithme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ts-node ./scripts/build.ts"
   },
   "keywords": [
     "ANDRII",
@@ -17,5 +18,11 @@
     "cv"
   ],
   "author": "4thwithme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.0.6"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
 }
