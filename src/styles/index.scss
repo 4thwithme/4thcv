@@ -190,7 +190,7 @@
 
     &-split {
       position: absolute;
-      top: 7.8vw;
+      top: 27.9vw;
       left: calc(50% - 4.5vw);
       width: 9vw;
       height: 0.15vw;
@@ -206,7 +206,7 @@
 
     &-right {
       position: absolute;
-      top: 7.8vw;
+      top: 0vw;
       left: calc(50% + 4.4vw);
       width: 0.15vw;
       height: 28vw;
@@ -225,13 +225,13 @@
     &-two {
       position: absolute;
       left: calc(50% + 3.75vw);
-      top: 12.8vw;
+      top: 9.8vw;
     }
 
     &-three {
       position: absolute;
       left: calc(50% + 3.75vw);
-      top: 24.8vw;
+      top: 22.8vw;
     }
 
     &-four {
@@ -249,13 +249,13 @@
     &-six {
       position: absolute;
       left: calc(50% - 5.15vw);
-      top: 24vw;
+      top: 31vw;
     }
 
     &-seven {
       position: absolute;
       left: calc(50% - 5.15vw);
-      top: 31vw;
+      top: 24vw;
     }
   }
 
@@ -304,13 +304,13 @@
 
   .exp-item-1 {
     left: 0;
-    top: 5.5vw;
+    top: 34vw;
     width: 26vw;
   }
 
   .exp-item-2 {
+    top: 27vw;
     left: 0;
-    top: 13vw;
     width: 26vw;
   }
 
@@ -321,27 +321,524 @@
   }
 
   .exp-item-4 {
-    top: 27vw;
     left: 0;
+    top: 13vw;
     width: 26vw;
   }
 
   .exp-item-5 {
     left: 0;
-    top: 34vw;
+    top: 5.5vw;
     width: 26vw;
   }
 
   .exp-item-6 {
     right: 0;
-    top: 15.5vw;
+    top: 25.5vw;
     width: 26vw;
   }
 
   .exp-item-7 {
     right: 0;
-    top: 27.5vw;
+    top: 12.5vw;
     width: 26vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+
+  .main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 19px;
+    background: $lg;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+      height: 1px;
+      width: 100%;
+      content: "";
+      background: $lg;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+    }
+  }
+
+  .top-section {
+    grid-area: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+    }
+
+    .header {
+      width: auto;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .name {
+        font-size: 32px;
+      }
+
+      .title {
+        margin-top: 5px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .icon {
+    max-height: 16px;
+  }
+
+  .info-block-title {
+    font-size: 25px;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .side-section {
+    grid-area: unset;
+    border-right: unset;
+    width: 320px;
+    align-self: center;
+
+    .sub-section {
+      padding: 10px;
+
+      .sub-section-title {
+        font-size: 25px;
+        line-height: 25px;
+        text-align: center;
+      }
+
+      .sub-section-title-2 {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 10px;
+      }
+
+      .info-list {
+        .info-list-item {
+          margin-top: 12px;
+          height: auto;
+
+          .info-link {
+            font-size: 18px;
+            line-height: 20px;
+            margin-left: 10px;
+          }
+
+          .small-text {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+
+        .small-margin {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .info-block-exp {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "dev"
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "teacher"
+      "item6"
+      "item7";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 40px 1fr 1fr 1fr 1fr 1fr 40px 1fr 1fr;
+    row-gap: 15px;
+
+    .info-block-title {
+      grid-area: title;
+    }
+  }
+
+  .info-section {
+    grid-area: unset;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 18px;
+    width: calc(100% - 20px);
+    padding: 10px 10px 0;
+    align-self: center;
+
+    .paragraph {
+      margin-bottom: 20px;
+    }
+
+    .exp-wrapper {
+      height: auto;
+      position: initial;
+    }
+
+    .line {
+      display: none;
+    }
+
+    .dot {
+      display: none;
+    }
+
+    .info-block-branch-wrapper {
+      grid-area: dev;
+    }
+
+    .info-block-branch-wrapper-2 {
+      grid-area: teacher;
+    }
+
+    .info-block-branch-wrapper {
+      position: initial;
+      border-radius: 4px;
+      padding: 6px;
+      border: solid 1px $white;
+      width: calc(100% - 14px);
+      left: 0;
+
+      .branch-img {
+        height: 20px;
+      }
+    }
+
+    .exp-item {
+      position: initial;
+      border: solid 1px $white;
+      border-radius: 4px;
+      padding: 6px;
+      font-size: 16px;
+      line-height: 18px;
+      width: calc(100% - 14px);
+    }
+
+    .exp-item-1 {
+      grid-area: item5;
+    }
+
+    .exp-item-2 {
+      grid-area: item4;
+    }
+
+    .exp-item-3 {
+      grid-area: item3;
+    }
+
+    .exp-item-4 {
+      grid-area: item2;
+    }
+
+    .exp-item-5 {
+      grid-area: item1;
+    }
+
+    .exp-item-6 {
+      grid-area: item7;
+    }
+
+    .exp-item-7 {
+      grid-area: item6;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .side-section {
+    grid-area: unset;
+    border-right: unset;
+    width: 100%;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-header {
+    padding: 5px 0;
+    font-size: 16px;
+    width: 1440px;
+    align-self: center;
+    margin: auto;
+  }
+
+  .main {
+    width: 1440px;
+    height: 2036.448px;
+    grid-template-rows: 417.6px 1618.848px;
+    grid-template-columns: 417.6px 1022.4px;
+    margin: auto;
+  }
+
+  .icon {
+    max-height: 14.4px;
+  }
+
+  .info-block-title {
+    font-size: 36px;
+    margin: 43.2px 0;
+  }
+
+  .link {
+    @include link;
+
+    margin-top: 7.2px;
+    font-size: 20.16px;
+    line-height: 23.04px;
+
+    &::after {
+      height: 0.72px;
+      bottom: -5.76px;
+    }
+  }
+
+  .top-section {
+    .img {
+      width: 360px;
+      height: 360px;
+      padding: 28.8px;
+    }
+
+    .header {
+      width: 1022.4px;
+
+      .name {
+        font-size: 40.32px;
+      }
+
+      .title {
+        margin-top: 7.2px;
+        font-size: 20.448px;
+      }
+    }
+  }
+
+  .side-section {
+    .sub-section {
+      padding: 28.8px;
+
+      .sub-section-title {
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .sub-section-title-2 {
+        font-size: 18.72px;
+        line-height: 20.88px;
+        margin-top: 14.4px;
+      }
+
+      .info-list {
+        .info-list-item {
+          margin-top: 17.28px;
+          height: 25.92px;
+
+          .info-link {
+            font-size: 23.04px;
+            line-height: 25.92px;
+            margin-left: 14.4px;
+          }
+
+          .small-text {
+            font-size: 14.4px;
+            line-height: 14.4px;
+          }
+        }
+
+        .small-margin {
+          margin-top: 12.384px;
+        }
+      }
+    }
+
+    .no-border {
+      border-bottom: unset;
+    }
+  }
+
+  .info-section {
+    padding: 0 28.8px 28.8px;
+    font-size: 20.448px;
+    line-height: 25.92px;
+
+    .paragraph {
+      margin-bottom: 21.6px;
+    }
+
+    .exp-wrapper {
+      height: 511.2px;
+    }
+
+    .line {
+      @include line;
+      border-radius: 1.44px;
+
+      &-first {
+        left: calc(50% - 64.8px);
+        width: 2.16px;
+        height: 115.2px;
+      }
+
+      &-split {
+        top: 401.76px;
+        left: calc(50% - 64.8px);
+        width: 129.6px;
+        height: 2.16px;
+      }
+
+      &-left {
+        position: absolute;
+        top: 112.32px;
+        left: calc(50% - 64.8px);
+        width: 2.16px;
+        height: 403.2px;
+      }
+
+      &-right {
+        position: absolute;
+        top: 0;
+        left: calc(50% + 63.36px);
+        width: 2.16px;
+        height: 403.2px;
+      }
+    }
+
+    .dot {
+      @include dot;
+      width: 21.6px;
+      height: 21.6px;
+
+      & > .git-commit {
+        width: 25.92px;
+      }
+
+      &-one {
+        left: calc(50% - 74.16px);
+        top: 40.32px;
+      }
+
+      &-two {
+        left: calc(50% + 54px);
+        top: 141.12px;
+      }
+
+      &-three {
+        left: calc(50% + 54px);
+        top: 328.32px;
+      }
+
+      &-four {
+        left: calc(50% - 74.16px);
+        top: 144px;
+      }
+
+      &-five {
+        left: calc(50% - 74.16px);
+        top: 244.8px;
+      }
+
+      &-six {
+        left: calc(50% - 74.16px);
+        top: 446.4px;
+      }
+
+      &-seven {
+        left: calc(50% - 74.16px);
+        top: 345.6px;
+      }
+    }
+
+    .info-block-branch-wrapper-2 {
+      top: -7.2px;
+    }
+
+    .info-block-branch-wrapper-1 {
+      top: -7.2px;
+    }
+
+    .info-block-branch-wrapper {
+      border-radius: 5.76px;
+      padding: 8.64px;
+      border: solid 1.44px $white;
+
+      .branch-img {
+        height: 28.8px;
+      }
+    }
+
+    .exp-item {
+      top: 115.2px;
+      border: solid 1.44px $white;
+      border-radius: 5.76px;
+      padding: 8.64px;
+      font-size: 17.28px;
+      line-height: 20.16px;
+    }
+
+    .exp-item-1 {
+      top: 489.6px;
+      width: 374.4px;
+    }
+
+    .exp-item-2 {
+      top: 388.8px;
+      width: 374.4px;
+    }
+
+    .exp-item-3 {
+      top: 288px;
+      width: 374.4px;
+    }
+
+    .exp-item-4 {
+      top: 187.2px;
+      width: 374.4px;
+    }
+
+    .exp-item-5 {
+      top: 79.2px;
+      width: 374.4px;
+    }
+
+    .exp-item-6 {
+      top: 367.2px;
+      width: 374.4px;
+    }
+
+    .exp-item-7 {
+      top: 180px;
+      width: 374.4px;
+    }
   }
 }
 
