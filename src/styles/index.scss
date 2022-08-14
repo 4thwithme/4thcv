@@ -45,6 +45,37 @@
   @include link;
 }
 
+.download-link {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $ff, monospace;
+  font-size: 1.4vw;
+  line-height: 1.6vw;
+  color: $black;
+  font-weight: 200;
+  text-decoration: none;
+  border: $border-black;
+  width: 23.5vw;
+  height: 4vw;
+  top: 22vw;
+  transition: 0.3s all;
+  margin-right: -0.3vw;
+
+  &:hover {
+    background: $lg;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 0.05vw solid;
+    border-image-slice: 1;
+    border-width: 0.05vw;
+    border-image-source: $lg;
+    transition: 0.1s all;
+  }
+}
+
 .top-section {
   grid-area: top;
   background-color: $bg-dark;
@@ -378,6 +409,31 @@
     }
   }
 
+  .download-link {
+    position: static;
+    font-size: 16px;
+    line-height: 20px;
+    width: 268px;
+    height: 57px;
+    margin-right: unset;
+    margin-top: 20px;
+
+    border: 0.72px solid;
+    border-width: 0.72px;
+
+    &:hover {
+      background: $lg;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: 0.72px solid;
+      border-image-slice: 1;
+      border-width: 0.72px;
+      border-image-source: $lg;
+      transition: 0.1s all;
+    }
+  }
+
   .top-section {
     grid-area: unset;
     display: flex;
@@ -393,7 +449,7 @@
 
     .header {
       width: auto;
-      height: 100px;
+      height: 180px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -607,6 +663,30 @@
   .info-block-title {
     font-size: 36px;
     margin: 43.2px 0;
+  }
+
+  .download-link {
+    font-size: 20px;
+    line-height: 20px;
+    top: 316px;
+    width: 338px;
+    height: 57px;
+    margin-right: -2.5px;
+
+    border: 0.72px solid;
+    border-width: 0.72px;
+
+    &:hover {
+      background: $lg;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: 0.72px solid;
+      border-image-slice: 1;
+      border-width: 0.72px;
+      border-image-source: $lg;
+      transition: 0.1s all;
+    }
   }
 
   .link {
@@ -843,5 +923,3 @@
 }
 
 // TODO: SEO
-// TODO: MOBILE VIEW
-// TODO: PRINT BTN
