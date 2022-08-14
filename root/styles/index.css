@@ -76,6 +76,46 @@
   background: linear-gradient(90deg, #ff0000, #8800ff);
 }
 
+.download-link {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.4vw;
+  line-height: 1.6vw;
+  color: #161616;
+  font-weight: 200;
+  text-decoration: none;
+  border: solid 0.05vw #161616;
+  width: 23.5vw;
+  height: 3.4vw;
+  top: 22vw;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin-right: -0.3vw;
+}
+
+.download-link:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+  background: linear-gradient(90deg, #ff0000, #8800ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 0.05vw solid;
+  border-image-slice: 1;
+  border-width: 0.05vw;
+  border-image-source: linear-gradient(90deg, #ff0000, #8800ff);
+  -webkit-transition: 0.1s all;
+  transition: 0.1s all;
+}
+
 .top-section {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -485,6 +525,26 @@
     bottom: -3px;
     left: 0;
   }
+  .download-link {
+    position: static;
+    font-size: 16px;
+    line-height: 20px;
+    width: 268px;
+    height: 48px;
+    margin-right: unset;
+    margin-top: 20px;
+    background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+    background: linear-gradient(90deg, #ff0000, #8800ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 0.72px solid;
+    border-image-slice: 1;
+    border-width: 0.72px;
+    border-image-source: linear-gradient(90deg, #ff0000, #8800ff);
+    -webkit-transition: 0.1s all;
+    transition: 0.1s all;
+  }
   .top-section {
     grid-area: unset;
     display: -webkit-box;
@@ -508,7 +568,7 @@
   }
   .top-section .header {
     width: auto;
-    height: 100px;
+    height: 180px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -717,6 +777,29 @@
   .info-block-title {
     font-size: 36px;
     margin: 43.2px 0;
+  }
+  .download-link {
+    font-size: 20px;
+    line-height: 20px;
+    top: 316px;
+    width: 338px;
+    height: 48px;
+    margin-right: -2.5px;
+    border: 0.72px solid;
+    border-width: 0.72px;
+  }
+  .download-link:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#8800ff));
+    background: linear-gradient(90deg, #ff0000, #8800ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 0.72px solid;
+    border-image-slice: 1;
+    border-width: 0.72px;
+    border-image-source: linear-gradient(90deg, #ff0000, #8800ff);
+    -webkit-transition: 0.1s all;
+    transition: 0.1s all;
   }
   .link {
     margin-top: 0.5vw;
@@ -942,6 +1025,12 @@
   .info-section .exp-item-7 {
     top: 180px;
     width: 374.4px;
+  }
+}
+
+@media print {
+  .download-link {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */
