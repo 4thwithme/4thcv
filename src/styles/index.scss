@@ -1,6 +1,10 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+body {
+  background: $bg-body;
+}
+
 .main-header {
   background: $lg;
   font-family: $ff, monospace;
@@ -80,6 +84,7 @@
   grid-area: top;
   background-color: $bg-dark;
   display: flex;
+  border-bottom: $border;
 
   .img {
     width: 25vw;
@@ -307,11 +312,11 @@
     background-color: $branch;
     display: flex;
     align-items: center;
-    border: solid 0.1vw $white;
+    border: solid 0.01vw $white;
     font-weight: 600;
 
     .branch-name-value {
-      color: $white;
+      color: $black;
     }
 
     .branch-img {
@@ -322,7 +327,7 @@
   .exp-item {
     position: absolute;
     top: 8vw;
-    border: solid 0.1vw $white;
+    border: solid 0.01vw $black;
     border-radius: 0.4vw;
     padding: 0.6vw;
     font-size: 1.2vw;
@@ -576,7 +581,7 @@
       position: initial;
       border-radius: 4px;
       padding: 6px;
-      border: solid 1px $white;
+      border: solid 0.1px $black;
       width: calc(100% - 14px);
       left: 0;
 
@@ -587,7 +592,7 @@
 
     .exp-item {
       position: initial;
-      border: solid 1px $white;
+      border: solid 0.1px $black;
       border-radius: 4px;
       padding: 6px;
       font-size: 16px;
@@ -864,7 +869,7 @@
     .info-block-branch-wrapper {
       border-radius: 5.76px;
       padding: 8.64px;
-      border: solid 1.44px $white;
+      border: solid 0.1 $black;
 
       .branch-img {
         height: 28.8px;
@@ -873,7 +878,7 @@
 
     .exp-item {
       top: 115.2px;
-      border: solid 1.44px $white;
+      border: solid 0.1px $black;
       border-radius: 5.76px;
       padding: 8.64px;
       font-size: 17.28px;
@@ -922,5 +927,3 @@
     display: none;
   }
 }
-
-// TODO: SEO
