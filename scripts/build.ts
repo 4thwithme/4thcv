@@ -61,6 +61,31 @@ async function copyIndexHtml(): Promise<void> {
   });
 }
 
+async function copyRootFiles(): Promise<void> {
+  return new Promise(async (res, rej) => {
+    try {
+      const FILES = [".htaccess"];
+
+      await Promise.all(
+        FILES.map((FILE) => {
+          fs.copyFile(
+            path.resolve(PROJECT_DIR, FILE),
+            path.resolve(PROJECT_DIR, "root", FILE),
+            (err) => {
+              if (err) rej(err);
+              console.log(`[copyIndexHtml]: copied ${FILE}`);
+            }
+          );
+        })
+      );
+
+      res();
+    } catch (error) {
+      console.error(error);
+    }
+  });
+}
+
 async function copyAssets(): Promise<void> {
   return new Promise((res, rej) => {
     try {
@@ -108,6 +133,7 @@ async function copyStyles(): Promise<void> {
 (async () => {
   await createRootDir();
   await copyIndexHtml();
+  await copyRootFiles();
   await copyAssets();
   await copyStyles();
 })();
