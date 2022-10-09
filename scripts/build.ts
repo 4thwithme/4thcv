@@ -65,26 +65,10 @@ async function copyAssets(): Promise<void> {
   return new Promise((res, rej) => {
     try {
       const PATH = path.resolve(PROJECT_DIR, "src/assets");
-      const DEST = path.resolve(PROJECT_DIR, "root/assets");
+      const DEST = path.resolve(PROJECT_DIR, "root/src/assets");
       fs.cp(PATH, DEST, { recursive: true }, (err) => {
         if (err) rej(err);
         console.log("[copyIndexHtml]: copied assets");
-        res();
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  });
-}
-
-async function copyJS(): Promise<void> {
-  return new Promise((res, rej) => {
-    try {
-      const PATH = path.resolve(PROJECT_DIR, "src/scripts");
-      const DEST = path.resolve(PROJECT_DIR, "root/scripts");
-      fs.cp(PATH, DEST, { recursive: true }, (err) => {
-        if (err) rej(err);
-        console.log("[copyIndexHtml]: copied scripts");
         res();
       });
     } catch (error) {
@@ -97,7 +81,7 @@ async function copyStyles(): Promise<void> {
   return new Promise((res, rej) => {
     try {
       const PATH = path.resolve(PROJECT_DIR, "src/styles");
-      const DEST = path.resolve(PROJECT_DIR, "root/styles");
+      const DEST = path.resolve(PROJECT_DIR, "root/src/styles");
       fs.cp(
         PATH,
         DEST,
@@ -125,6 +109,5 @@ async function copyStyles(): Promise<void> {
   await createRootDir();
   await copyIndexHtml();
   await copyAssets();
-  await copyJS();
   await copyStyles();
 })();
