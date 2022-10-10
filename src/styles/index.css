@@ -336,7 +336,7 @@ body {
   background-color: #afafaf;
   display: flex;
   align-items: center;
-  border: solid 0.01vw #fff;
+  border: solid 0.01vw #161616;
   font-weight: 600;
 }
 .info-section .info-block-branch-wrapper .branch-name-value {
